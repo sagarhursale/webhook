@@ -5,32 +5,87 @@
   <title>Webhook Setup Complete</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #00ffcc;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
-      padding: 80px;
+      overflow: hidden;
     }
+
     h1 {
       font-size: 3em;
-      margin-bottom: 20px;
+      margin-top: 80px;
+      animation: popIn 1s ease-out forwards;
     }
+
     .emoji {
       font-size: 4em;
       margin: 20px 0;
+      animation: bounce 2s infinite;
     }
+
     .message {
       font-size: 1.5em;
-      color: #ffffff;
+      color: #aaffee;
+      animation: fadeIn 2s ease-in;
     }
+
     .footer {
-      margin-top: 60px;
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
       font-size: 0.9em;
-      color: #999;
+      color: #cccccc;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ffcc00;
+      animation: fall 3s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
     }
   </style>
 </head>
 <body>
   <h1>í¾‰ Webhook Setup Completed!</h1>
   <div class="emoji">íº€âœ…í³¦</div>
-  <div class="message">Your project is packed
+  <div class="message">Your project is packed and ready to deploy.</div>
+  <div class="footer">Â© 2025 DevOps by Sagar Hursale</div>
+
+  <script>
+    // Generate confetti
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = ['#ffcc00', '#00ffcc', '#ff6699'][Math.floor(Math.random() * 3)];
+      confetti.style.animationDuration = (2 + Math.random() * 3) + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
