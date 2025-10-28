@@ -1,1 +1,38 @@
-hello devops folks
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic CI/CD Pipeline</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .pipeline { display: flex; justify-content: space-around; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+    .stage { text-align: center; padding: 10px; }
+    .stage h3 { margin-bottom: 10px; color: #333; }
+    .arrow { font-size: 24px; margin: 0 10px; color: #888; }
+  </style>
+</head>
+<body>
+  <h1>Basic CI/CD Pipeline</h1>
+  <div class="pipeline">
+    <div class="stage">
+      <h3>Code</h3>
+      <p>Developer pushes code</p>
+    </div>
+    <div class="arrow">➡️</div>
+    <div class="stage">
+      <h3>Build</h3>
+      <p>Jenkins compiles & packages</p>
+    </div>
+    <div class="arrow">➡️</div>
+    <div class="stage">
+      <h3>Test</h3>
+      <p>Automated tests run</p>
+    </div>
+    <div class="arrow">➡️</div>
+    <div class="stage">
+      <h3>Deploy</h3>
+      <p>App deployed to server</p>
+    </div>
+  </div>
+</body>
+</html>
